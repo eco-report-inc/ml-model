@@ -21,4 +21,8 @@ model = YOLO("yolov8n.yaml")
 # Use the model
 model.train(data= os.path.join(ROOT_DIR, "trash-config.yaml"), epochs=3) # train the model and custom the epoch to reach your desired accuracy
 
-!scp -r /content/runs '/content/gdrive/My Drive/...(your dataset path)'
+# Result Check
+from IPython.display import display, Image
+Image(filename=f'(fill it with your result.png path)', width=600)
+
+Image(filename=f'(fill it with your confusion_matrix.png path)', width=600)
