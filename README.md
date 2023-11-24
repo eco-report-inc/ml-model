@@ -7,7 +7,7 @@ Available Datasets on: https://universe.roboflow.com/search?q=class:garbage
 
 Jihan: https://universe.roboflow.com/tcs-e77d0/aggra [contained 3774 images | using YOLOv8]
 
-Zahra:
+Zahra:https://github.com/eco-report-inc/ml-model [contained 1539 images | using YOLOv8]
 
 Hikmal:
 
