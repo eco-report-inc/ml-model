@@ -1,4 +1,4 @@
-path: "/content/gdrive/MyDrive/...(your dataset path)"
+path: "/content/gdrive/MyDrive/Eco Report/Datasets"
 train: train/images
 val: valid/images
 test: test/images
