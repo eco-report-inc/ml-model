@@ -10,7 +10,7 @@ ROOT_DIR = '/content/gdrive/My Drive/Eco Report'
 
 # Unzip Datasets (One time only)
 !mkdir '/content/gdrive/My Drive/Eco Report/Datasets'
-!unzip "/content/gdrive/MyDrive/Eco Report/aggra.v2i.yolov8.zip)" -d "/content/gdrive/MyDrive/Eco Report/Datasets)"
+!unzip "/content/gdrive/MyDrive/Eco Report/aggra.v2i.yolov8.zip" -d "/content/gdrive/MyDrive/Eco Report/Datasets"
 
 # Import Dataset Model
 import os
