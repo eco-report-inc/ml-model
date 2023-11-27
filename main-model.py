@@ -15,6 +15,7 @@ ROOT_DIR = '/content/gdrive/My Drive/Eco Report'
 # Import Dataset Model
 import os
 from ultralytics import YOLO
+from IPython.display import display, Image
 
 # Load a model
 model = YOLO("yolov8n.yaml")
@@ -27,10 +28,6 @@ tensorboard_callback = model.train(data= data_config,
                                    epochs= 100,
                                    project= log_dir,
                                    )
-# Use the model
-model.train()
-
 # Result Check
-from IPython.display import display, Image
 Image(filename=f'(/content/gdrive/My Drive/Eco Report/logs/train/result.png)', width=600)
 Image(filename=f'(/content/gdrive/My Drive/Eco Report/logs/train/confusion_matrix.png)', width=600)
