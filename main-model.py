@@ -25,9 +25,18 @@ model = YOLO("yolov8n.yaml")
 data_config= os.path.join(ROOT_DIR, "trash-config.yaml")
 log_dir= '/content/gdrive/My Drive/Eco Report/logs'
 tensorboard_callback = model.train(data= data_config,
-                                   epochs= 100,
+                                   epochs= 50,
                                    project= log_dir,
                                    )
+
+# Validate Model
+!yolo task=detect mode=val model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.pt' data=trash-config.yaml
+
 # Result Check
 Image(filename=f'(/content/gdrive/My Drive/Eco Report/logs/train/result.png)', width=600)
 Image(filename=f'(/content/gdrive/My Drive/Eco Report/logs/train/confusion_matrix.png)', width=600)
+
+# Predict
+!yolo task=detect mode=predict model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.pt' conf=0.25 source=test_images
+!yolo task=segment mode=predict model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.seg' source=test_images
+!yolo task=detect mode=predict model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.pt'source=test_images
