@@ -7,7 +7,7 @@ Available Datasets on: https://universe.roboflow.com/search?q=class:garbage
 
 Jihan: https://universe.roboflow.com/tcs-e77d0/aggra [contained 3774 images | using YOLOv8]
 
-Zahra: https://universe.roboflow.com/universidad-carlos-iii-de-madrid-i1yfs/final-garbage-detection/dataset/1 [contained 1539 images | using YOLOv8]
+Zahra: https://universe.roboflow.com/universidad-carlos-iii-de-madrid-i1yfs/5-final-garbage-detection
 
 Hikmal: https://universe.roboflow.com/sampahdetect/trashdetect/dataset/21
 
