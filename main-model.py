@@ -34,8 +34,8 @@ directory_path = '/content/gdrive/MyDrive/Eco Report/logs/train'
 contents = os.listdir(directory_path)
 print(contents)
 
-Image(filename=f'(/content/gdrive/My Drive/Eco Report/logs/train/result.png)', width=600)
-Image(filename=f'(/content/gdrive/My Drive/Eco Report/logs/train/confusion_matrix.png)', width=600)
+Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/result.png', width=600)
+Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/confusion_matrix.png', width=600)
 
 # When predicting model if you got UTF-8 error please run this few code first
 import locale
