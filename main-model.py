@@ -11,8 +11,9 @@ ROOT_DIR = '/content/gdrive/My Drive/Eco Report'
 # Unzip Datasets (One time only)
 !unzip "/content/gdrive/MyDrive/Eco Report/aggra.v2i.yolov8.zip" -d "/content/gdrive/MyDrive/Eco Report/Datasets"
 
-# Import Dataset Model
+# Import Library
 import os
+import shutil
 from ultralytics import YOLO
 from IPython.display import display, Image
 
@@ -29,7 +30,7 @@ model.train(data= data_config,
             project= log_dir,
             )
 
-# Result Check
+# Train Result Check
 directory_path = '/content/gdrive/MyDrive/Eco Report/logs/train'
 contents = os.listdir(directory_path)
 print(contents)
@@ -37,13 +38,14 @@ print(contents)
 Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/result.png', width=600)
 Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/confusion_matrix.png', width=600)
 
-# When predicting model if you got UTF-8 error please run this few code first
-import locale
-print(locale.getpreferredencoding())
+# Validate Model
+output_directory = '/content/gdrive/MyDrive/EcoReport'
+!yolo task=detect mode=val model='/content/gdrive/MyDrive/EcoReport/logs/train8/weights/best.pt' data= '/content/gdrive/MyDrive/EcoReport/data.yaml'
 
-def getpreferredencoding(do_setlocale = True):
-    return "UTF-8"
-locale.getpreferredencoding = getpreferredencoding
+shutil.move('/content/runs/detect/val', output_directory)
+
+# Check Validation Result
+Image(filename=f'/content/gdrive/MyDrive/EcoReport/val/confusion_matrix.png', width=600)
 
 # Predict Model
 model= YOLO('/content/gdrive/MyDrive/Eco Report/logs/train4/weights/best.pt')
@@ -52,10 +54,6 @@ result= model(source)
 
 model.predict(source, save=True, imgsz=640, conf=0.25)
 
-# Check predicted images
+# Check Prediction Result
 Image(filename=f'/content/runs/detect/predict2/-libre-place-des-dejections-en-plusieurs-langues-photo-marc-wirtz-1430300655_jpg.rf.0d5eae0d8975922bffeafd619e49f2f5.jpg', width=600)
 
-# Haven't try this code yet #
-!yolo task=detect mode=predict model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.pt' conf=0.25 source=test_images
-!yolo task=segment mode=predict model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.seg' source=test_images
-!yolo task=detect mode=predict model='/content/gdrive/My Drive/Eco Report/logs/detect/train/weights/best.pt'source=test_images
