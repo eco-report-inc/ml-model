@@ -26,7 +26,7 @@ log_dir= '/content/gdrive/My Drive/Eco Report/logs'
 
 # Train a model
 model.train(data= data_config,
-            epochs= 20,
+            epochs= 150,
             project= log_dir,
             )
 
@@ -35,7 +35,7 @@ directory_path = '/content/gdrive/MyDrive/Eco Report/logs/train'
 contents = os.listdir(directory_path)
 print(contents)
 
-Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/result.png', width=600)
+Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/results.png', width=600)
 Image(filename=f'/content/gdrive/My Drive/Eco Report/logs/train/confusion_matrix.png', width=600)
 
 # Validate Model
@@ -57,3 +57,10 @@ model.predict(source, save=True, imgsz=640, conf=0.25)
 # Check Prediction Result
 Image(filename=f'/content/runs/detect/predict2/-libre-place-des-dejections-en-plusieurs-langues-photo-marc-wirtz-1430300655_jpg.rf.0d5eae0d8975922bffeafd619e49f2f5.jpg', width=600)
 
+# Save Predicted Image
+output_directory = '/content/gdrive/MyDrive/EcoReport/Result'
+shutil.move('/content/runs/detect/predict', output_directory)
+
+#Export Model format ONNX
+model= YOLO('/content/gdrive/MyDrive/EcoReport/logs/train2/weights/best.pt')
+model.export(format='onnx')
