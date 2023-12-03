@@ -1,9 +1,9 @@
 # This setup file usually already contained in the dataset.zip with the name 'data.yaml' so u can just rename the file into 'test-config.yaml'
 
 path: "/content/gdrive/MyDrive/Eco Report/Datasets"
-train: /train/images
-val: /valid/images
-test: /test/images
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 1
 names: ['trash']
