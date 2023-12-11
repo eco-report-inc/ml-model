@@ -1,14 +1,16 @@
-# Waste Image Detector
+# [Eco-Report] Waste Image Detection
 
-Available Datasets on: https://universe.roboflow.com/search?q=class:garbage
+This feature allows users to detect trash in real-time within the app itself. It serves as a means to ensure that users' reports are not just random pictures taken, which may not accurately indicate an improper trash disposal area. By leveraging the YOLOv8 algorithm or its newest version, we aim to capitalize on its benefits, addressing challenges, and fostering hope for more efficient trash detection and reporting.
 
+For instance, YOLOv8 offers significantly faster processing speeds compared to its predecessors. This means that users can experience quicker and more responsive trash detection within the app, enhancing the overall user experience. However, one challenge we face in implementing this feature is the need for continuous updates to adapt to evolving waste patterns and types. Keeping the algorithm up-to-date to recognize new forms of trash and disposal methods is an ongoing challenge that requires constant attention.
 
-## Used Datasets
+Moreover, YOLOv8, like any technology, has its limitations. It may struggle with accurately identifying certain types of trash in complex or cluttered environments, leading to potential false positives or negatives. Additionally, the algorithm's performance can be influenced by factors such as lighting conditions and the quality of the images captured by users. Despite these challenges, we remain hopeful that ongoing developments in Eco Report project will allow us to overcome these limitations and continually improve our app's trash detection capabilities.
 
-Jihan: https://universe.roboflow.com/tcs-e77d0/aggra [contained 3774 images | using YOLOv8]
+## How to Launch it in Web
 
-Zahra: https://universe.roboflow.com/universidad-carlos-iii-de-madrid-i1yfs/5-final-garbage-detection
+(tutorial and files coming soon)
 
-Hikmal: https://universe.roboflow.com/sampahdetect/trashdetect/dataset/21
+## Resources License
 
-#### ! Please make sure when downloading the Dataset choose your desired YOLO version and download it as a zip folder then upload it on your personal drive to do the training !
+(still collecting data)
+
