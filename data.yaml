@@ -1,16 +1,16 @@
 # This setup file usually already contained in the dataset.zip with the name 'data.yaml' so u can just rename the file into 'test-config.yaml'
 
-path: "/content/gdrive/MyDrive/Eco Report/Datasets"
+path: "/content/gdrive/MyDrive/EcoReport/Datasets"
 train: train/images
 val: valid/images
 test: test/images
 
 nc: 1
-names: ['trash']
+names: ['Garbage']
 
 roboflow:
-  workspace: tcs-e77d0
-  project: aggra
-  version: 2
+  workspace: lebanese-university
+  project: extra-garbage-images
+  version: 1
   license: CC BY 4.0
-  url: https://universe.roboflow.com/tcs-e77d0/aggra/dataset/2
+  url: https://universe.roboflow.com/lebanese-university/extra-garbage-images/dataset/1
