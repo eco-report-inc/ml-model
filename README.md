@@ -12,5 +12,5 @@ Moreover, YOLOv8, like any technology, has its limitations. It may struggle with
 
 ## Resources License
 
-(still collecting data)
+include inside train folder named "Dataset License.txt"
 
