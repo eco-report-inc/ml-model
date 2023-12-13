@@ -9,10 +9,9 @@ Moreover, YOLOv8, like any technology, has its limitations. It may struggle with
 ## Model Detail Information
 
 - mAP of the model reach 85%
-- precision reach 85%
-- recall reach 81%
-
-Speed: 0.3ms preprocess, 3.0ms inference, 0.0ms loss, 6.2ms postprocess per image
+- Precision reach 85%
+- Recall reach 81%
+- Speed: 0.3ms preprocess, 3.0ms inference, 0.0ms loss, 6.2ms postprocess per image
 
 ## Resources License
 
